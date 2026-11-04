@@ -1,0 +1,3 @@
+Checking tasks/water-report-extraction/task.toml...
+PASS tasks/water-report-extraction
+All task.toml files have the expected [task] name

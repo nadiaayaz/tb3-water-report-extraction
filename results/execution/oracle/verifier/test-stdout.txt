@@ -1,0 +1,94 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-9.1.1, pluggy-1.7.0
+cachedir: /tmp/pytest-cache
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 22 items
+
+tests/test_outputs.py ......................                             [100%]
+
+==================================== PASSES ====================================
+______________________ test_held_out_report[ak-unalaska] _______________________
+----------------------------- Captured stdout call -----------------------------
+ak-unalaska: score 1.0000 (59/59 key facts, 0 extra; 7 records for 7 in the key)
+______________________ test_held_out_report[ar-beaverwd] _______________________
+----------------------------- Captured stdout call -----------------------------
+ar-beaverwd: score 0.9924 (521/525 key facts, 0 extra; 112 records for 113 in the key)
+_____________________ test_held_out_report[az-scottsdale] ______________________
+----------------------------- Captured stdout call -----------------------------
+az-scottsdale: score 0.9565 (198/207 key facts, 0 extra; 38 records for 41 in the key)
+_______________________ test_held_out_report[ca-mammoth] _______________________
+----------------------------- Captured stdout call -----------------------------
+ca-mammoth: score 0.9697 (128/132 key facts, 0 extra; 19 records for 20 in the key)
+_______________________ test_held_out_report[co-boulder] _______________________
+----------------------------- Captured stdout call -----------------------------
+co-boulder: score 1.0000 (135/135 key facts, 0 extra; 15 records for 15 in the key)
+________________________ test_held_out_report[de-dover] ________________________
+----------------------------- Captured stdout call -----------------------------
+de-dover: score 1.0000 (181/181 key facts, 0 extra; 21 records for 21 in the key)
+______________________ test_held_out_report[fl-capecoral] ______________________
+----------------------------- Captured stdout call -----------------------------
+fl-capecoral: score 1.0000 (114/114 key facts, 0 extra; 16 records for 16 in the key)
+____________________ test_held_out_report[ga-athensclarke] _____________________
+----------------------------- Captured stdout call -----------------------------
+ga-athensclarke: score 0.9759 (81/83 key facts, 0 extra; 10 records for 10 in the key)
+_____________________ test_held_out_report[hi-kauai-lihue] _____________________
+----------------------------- Captured stdout call -----------------------------
+hi-kauai-lihue: score 1.0000 (102/102 key facts, 0 extra; 13 records for 13 in the key)
+_____________________ test_held_out_report[in-bloomington] _____________________
+----------------------------- Captured stdout call -----------------------------
+in-bloomington: score 1.0000 (89/89 key facts, 0 extra; 13 records for 13 in the key)
+______________________ test_held_out_report[ks-kucampus] _______________________
+----------------------------- Captured stdout call -----------------------------
+ks-kucampus: score 0.9742 (302/310 key facts, 0 extra; 51 records for 52 in the key)
+______________________ test_held_out_report[mi-annarbor] _______________________
+----------------------------- Captured stdout call -----------------------------
+mi-annarbor: score 0.9636 (238/243 key facts, 4 extra; 46 records for 46 in the key)
+_____________________ test_held_out_report[mn-minneapolis] _____________________
+----------------------------- Captured stdout call -----------------------------
+mn-minneapolis: score 1.0000 (90/90 key facts, 0 extra; 14 records for 14 in the key)
+______________________ test_held_out_report[mt-whitefish] ______________________
+----------------------------- Captured stdout call -----------------------------
+mt-whitefish: score 1.0000 (98/98 key facts, 0 extra; 11 records for 11 in the key)
+________________________ test_held_out_report[or-eweb] _________________________
+----------------------------- Captured stdout call -----------------------------
+or-eweb: score 1.0000 (64/64 key facts, 0 extra; 10 records for 10 in the key)
+______________________ test_held_out_report[sc-florence] _______________________
+----------------------------- Captured stdout call -----------------------------
+sc-florence: score 1.0000 (87/87 key facts, 0 extra; 11 records for 11 in the key)
+_________________________ test_held_out_report[tn-kub] _________________________
+----------------------------- Captured stdout call -----------------------------
+tn-kub: score 0.9669 (117/117 key facts, 4 extra; 27 records for 26 in the key)
+________________ test_held_out_report[va-kinggeorge-canterbury] ________________
+----------------------------- Captured stdout call -----------------------------
+va-kinggeorge-canterbury: score 1.0000 (80/80 key facts, 0 extra; 10 records for 10 in the key)
+______________________ test_held_out_report[vt-richmond] _______________________
+----------------------------- Captured stdout call -----------------------------
+vt-richmond: score 1.0000 (141/141 key facts, 0 extra; 24 records for 24 in the key)
+______________________ test_held_out_report[wa-whitworth] ______________________
+----------------------------- Captured stdout call -----------------------------
+wa-whitworth: score 1.0000 (69/69 key facts, 0 extra; 11 records for 11 in the key)
+=========================== short test summary info ============================
+PASSED tests/test_outputs.py::test_extractor_exists
+PASSED tests/test_outputs.py::test_held_out_set_is_complete
+PASSED tests/test_outputs.py::test_held_out_report[ak-unalaska]
+PASSED tests/test_outputs.py::test_held_out_report[ar-beaverwd]
+PASSED tests/test_outputs.py::test_held_out_report[az-scottsdale]
+PASSED tests/test_outputs.py::test_held_out_report[ca-mammoth]
+PASSED tests/test_outputs.py::test_held_out_report[co-boulder]
+PASSED tests/test_outputs.py::test_held_out_report[de-dover]
+PASSED tests/test_outputs.py::test_held_out_report[fl-capecoral]
+PASSED tests/test_outputs.py::test_held_out_report[ga-athensclarke]
+PASSED tests/test_outputs.py::test_held_out_report[hi-kauai-lihue]
+PASSED tests/test_outputs.py::test_held_out_report[in-bloomington]
+PASSED tests/test_outputs.py::test_held_out_report[ks-kucampus]
+PASSED tests/test_outputs.py::test_held_out_report[mi-annarbor]
+PASSED tests/test_outputs.py::test_held_out_report[mn-minneapolis]
+PASSED tests/test_outputs.py::test_held_out_report[mt-whitefish]
+PASSED tests/test_outputs.py::test_held_out_report[or-eweb]
+PASSED tests/test_outputs.py::test_held_out_report[sc-florence]
+PASSED tests/test_outputs.py::test_held_out_report[tn-kub]
+PASSED tests/test_outputs.py::test_held_out_report[va-kinggeorge-canterbury]
+PASSED tests/test_outputs.py::test_held_out_report[vt-richmond]
+PASSED tests/test_outputs.py::test_held_out_report[wa-whitworth]
+============================= 22 passed in 24.89s ==============================

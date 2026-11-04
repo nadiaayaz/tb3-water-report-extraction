@@ -1,0 +1,52 @@
+{
+ "trial": 1,
+ "agent": "Claude Code via Harbor",
+ "claude_code_version": "2.1.287",
+ "model": "claude-opus-5-5",
+ "reasoning_effort": "max",
+ "env": {
+  "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "128000"
+ },
+ "first_event_utc": "2026-10-21T08:01:34.225Z",
+ "last_event_utc": "2026-10-21T08:55:52.369Z",
+ "minutes": 54,
+ "agent_limit_minutes": 120,
+ "tool_calls": {
+  "Bash": 114,
+  "Read": 2,
+  "Write": 1
+ },
+ "responses_cut_at_output_limit": 0,
+ "web_tools": "WebSearch and WebFetch disabled for the trial; 0 web requests",
+ "workspace": "a fresh folder holding the task files as /app; Python 3.9 venv with pdfplumber 0.11.8 and pypdf 6.21.1; poppler-utils on the PATH",
+ "format_md_seen": "v1: an earlier revision of /app/FORMAT.md. The packaged task has v3.1, which states some rules more explicitly (range sub-rows, count-only microbiological tables, labelled values in range cells, next-test dates, line-paired values, ALG goals); the visible examples and their keys were the same. The submission is graded on the v3.1 keys.",
+ "ended": "by itself, with a finished deliverable (result: success, terminal_reason: completed)",
+ "graded": "re-graded in this repository's verifier image (tasks/water-report-extraction/tests, FORMAT v3.1 keys)",
+ "reward": 0,
+ "held_out_passed": 6,
+ "held_out_total": 20,
+ "failed": {
+  "ar-beaverwd": 0.7361,
+  "az-scottsdale": 0.9296,
+  "ca-mammoth": 0.5909,
+  "co-boulder": 0.7718,
+  "ga-athensclarke": 0.2135,
+  "in-bloomington": 0.7303,
+  "ks-kucampus": 0.6323,
+  "mi-annarbor": 0.7153,
+  "mn-minneapolis": 0.7222,
+  "or-eweb": 0.7424,
+  "sc-florence": 0.2963,
+  "tn-kub": 0.5128,
+  "vt-richmond": 0.3546,
+  "wa-whitworth": 0.5362
+ },
+ "execution": {
+  "framework": "Harbor",
+  "agent_harness": "claude-code",
+  "environment": "temporary VM (no longer available)",
+  "provenance_source": "author account",
+  "original_harbor_logs_available": false,
+  "record_type": "retained result summary; not a native Harbor export"
+ }
+}

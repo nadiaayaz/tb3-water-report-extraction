@@ -1,0 +1,140 @@
+{
+ "records": [
+  {
+   "system": "0590000",
+   "contaminant": "Fluoride",
+   "sample_date": null,
+   "level": 1.28,
+   "range_low": 0.47,
+   "range_high": 1.28,
+   "unit": "ppm",
+   "mcl": 4.0,
+   "mclg": 4.0,
+   "violation": "N",
+   "other_values": {
+    "Average": 0.69
+   }
+  },
+  {
+   "system": "0590000",
+   "contaminant": "Nitrate (Nitrogen)",
+   "sample_date": null,
+   "level": 0.37,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": 10.0,
+   "mclg": 10.0,
+   "violation": "N"
+  },
+  {
+   "system": "0590000",
+   "contaminant": "Haloacetic Acids",
+   "sample_date": null,
+   "level": 30.7,
+   "range_low": 0.0,
+   "range_high": 50.5,
+   "unit": "ppb",
+   "mcl": 60.0,
+   "mclg": 0.0,
+   "violation": "N"
+  },
+  {
+   "system": "0590000",
+   "contaminant": "Filtered Turbidity",
+   "sample_date": null,
+   "level": 0.13,
+   "range_low": null,
+   "range_high": null,
+   "unit": "NTU",
+   "mcl": "TT = 1.00 NTU",
+   "mclg": 0.0,
+   "violation": "N"
+  },
+  {
+   "system": "0590000",
+   "contaminant": "Filtered Turbidity",
+   "sample_date": null,
+   "level": "100.00% \u2264 0.30 NTU",
+   "range_low": null,
+   "range_high": null,
+   "unit": "NTU",
+   "mcl": "TT = 95% of samples \u2264 0.30 NTU",
+   "mclg": 0.0,
+   "violation": "N"
+  },
+  {
+   "system": "0590000",
+   "contaminant": "Total Trihalomethanes (TTHMS)",
+   "sample_date": null,
+   "level": 42.97,
+   "range_low": 0.0,
+   "range_high": 83.6,
+   "unit": "ppb",
+   "mcl": 80.0,
+   "mclg": 0.0,
+   "violation": "N"
+  },
+  {
+   "system": "0590000",
+   "contaminant": "Chlorine",
+   "sample_date": null,
+   "level": 1.99,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": 4.0,
+   "mclg": 4.0,
+   "violation": "N",
+   "other_values": {
+    "Average": 0.93
+   }
+  },
+  {
+   "system": "0590000",
+   "contaminant": "Total Organic Carbon",
+   "sample_date": null,
+   "level": 1.16,
+   "range_low": 1.0,
+   "range_high": 1.36,
+   "unit": "ppm",
+   "mcl": "TT",
+   "mclg": null,
+   "violation": "N",
+   "other_values": {
+    "Annual Average Removal (%)": "40.46%",
+    "Range of Removal (%)": "35.00%\u201347.62%"
+   }
+  },
+  {
+   "system": "0590000",
+   "contaminant": "Copper",
+   "sample_date": "7/29/24 through 9/12/24",
+   "level": 0.086,
+   "range_low": 0.0048,
+   "range_high": 0.38,
+   "unit": "ppm",
+   "mcl": 1.3,
+   "mclg": 1.3,
+   "violation": "N",
+   "other_values": {
+    "samples over AL": 0
+   }
+  },
+  {
+   "system": "0590000",
+   "contaminant": "Lead",
+   "sample_date": "7/29/24 through 9/12/24",
+   "level": 3.5,
+   "range_low": 0.0,
+   "range_high": 21.0,
+   "unit": "ppb",
+   "mcl": 15.0,
+   "mclg": 0.0,
+   "violation": "N",
+   "other_values": {
+    "samples over AL": 2
+   }
+  }
+ ]
+}

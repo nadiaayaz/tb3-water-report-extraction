@@ -1,0 +1,17 @@
+
+🔎 Checking task quality...
+  1/1 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:08:45 0:00:00❌ water-report-extraction: Check agent did not produce a valid result.
+Verifier output:
+missing result file: check-result.json
+Trial artifacts: 
+/Users/dev/tb3-work/harbor-jobs/rubric/tb3-water-report-extraction/2026-11-03__1
+5-35-01/check-water-report-extraction__GQd92Si
+Try again or use a more capable model (-m sonnet or -m opus).
+
+Report: 
+/Users/dev/tb3-work/harbor-jobs/rubric/tb3-water-report-extraction/2026-11-03__1
+5-35-01/check_report.json
+Inspect results by running `harbor view 
+/Users/dev/tb3-work/harbor-jobs/rubric/tb3-water-report-extraction`
+In the viewer, open a trial's Artifacts tab to read its check-result.json, and 
+use ← / → to switch between tasks.

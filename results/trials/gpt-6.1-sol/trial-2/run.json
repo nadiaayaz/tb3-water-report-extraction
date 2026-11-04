@@ -1,0 +1,61 @@
+{
+ "trial": 2,
+ "agent": "Claude Code via Harbor",
+ "model": "gpt-6.1-sol",
+ "reasoning_effort": "xhigh",
+ "started_utc": "2026-10-28T22:42:42Z",
+ "finished_utc": "2026-10-29T00:38:50Z",
+ "minutes": 116,
+ "agent_limit_minutes": 120,
+ "commands_run": 139,
+ "file_edits": 52,
+ "n_input_tokens": 26784842,
+ "n_cached_input_tokens": 26629632,
+ "n_output_tokens": 231607,
+ "web": "told not to use web search; none used. Network was on for package installs; curl download of the Tesseract English model (tesseract-ocr/tessdata_best eng.traineddata) into extractor/tessdata",
+ "workspace": "a fresh folder holding the task files as /app; Python venv with pdfplumber and pypdf; poppler-utils on the PATH",
+ "format_md_seen": "v3.1",
+ "ended": "by itself, exit 0, with a finished deliverable",
+ "graded": "re-graded in this repository's verifier image (tasks/water-report-extraction/tests, FORMAT v3.1 keys)",
+ "reward": 0,
+ "held_out_passed": 5,
+ "held_out_total": 20,
+ "failed": {
+  "ar-beaverwd": 0.8762,
+  "az-scottsdale": 0.6763,
+  "ca-mammoth": 0.1594,
+  "co-boulder": 0.7447,
+  "ga-athensclarke": 0.0964,
+  "in-bloomington": 0.2021,
+  "mi-annarbor": 0.9012,
+  "mn-minneapolis": 0.8778,
+  "mt-whitefish": 0.0545,
+  "or-eweb": 0.14,
+  "sc-florence": 0.7476,
+  "tn-kub": 0.9231,
+  "va-kinggeorge-canterbury": 0.6373,
+  "vt-richmond": 0.1208,
+  "wa-whitworth": 0.8116
+ },
+ "submission_not_copied": {
+  "folders": {
+   "tessdata": {
+    "files": [
+     "LICENSE",
+     "eng.traineddata"
+    ],
+    "bytes": 15410774
+   }
+  },
+  "what": "third-party OCR model files the agent downloaded into the extractor folder (with their licence files), for an OCR fallback on image-only pages",
+  "check": "the submission here without these files gives the same score on every held-out report as the full final folder"
+ },
+ "execution": {
+  "framework": "Harbor",
+  "agent_harness": "claude-code",
+  "environment": "temporary VM (no longer available)",
+  "provenance_source": "author account",
+  "original_harbor_logs_available": false,
+  "record_type": "retained result summary; not a native Harbor export"
+ }
+}

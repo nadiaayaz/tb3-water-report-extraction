@@ -1,0 +1,217 @@
+{
+ "records": [
+  {
+   "system": "5020047",
+   "contaminant": "HAA5",
+   "sample_date": "2024",
+   "level": 24,
+   "range_low": 16,
+   "range_high": 36,
+   "unit": "ppb",
+   "mcl": 60,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "TTHM",
+   "sample_date": "2024",
+   "level": 70,
+   "range_low": 25,
+   "range_high": 143,
+   "unit": "ppb",
+   "mcl": 80,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "Free Chlorine",
+   "sample_date": "2024",
+   "level": 1.03,
+   "range_low": 0.27,
+   "range_high": 1.03,
+   "unit": "ppm",
+   "mcl": 4.0,
+   "mclg": "MRDLG -4",
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "Nitrate",
+   "sample_date": "2024",
+   "level": 0.51,
+   "range_low": 0.37,
+   "range_high": 0.71,
+   "unit": "ppm",
+   "mcl": 10,
+   "mclg": 10,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "Barium",
+   "sample_date": "5/10/2024",
+   "level": 0.037,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": 10,
+   "mclg": 10,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "Fluoride",
+   "sample_date": "5/10/2024",
+   "level": 0.834,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": 4,
+   "mclg": 2,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "Calcium",
+   "sample_date": "2024",
+   "level": 24,
+   "range_low": 19,
+   "range_high": 30,
+   "unit": "ppm",
+   "mcl": null,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "HAA5",
+   "sample_date": "2024",
+   "level": 18,
+   "range_low": 11.5,
+   "range_high": 33.6,
+   "unit": "ppb",
+   "mcl": 60,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "TTHM",
+   "sample_date": "2024",
+   "level": 54,
+   "range_low": 16,
+   "range_high": 119,
+   "unit": "ppb",
+   "mcl": 80,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "Orthophosphate",
+   "sample_date": "2024",
+   "level": 1.75,
+   "range_low": 1.22,
+   "range_high": 2.05,
+   "unit": "ppm",
+   "mcl": null,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "Iron",
+   "sample_date": "10/2/2024",
+   "level": 0.016,
+   "range_low": 0,
+   "range_high": 0.075,
+   "unit": "ppm",
+   "mcl": null,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "Free Chlorine",
+   "sample_date": "2024",
+   "level": 0.64,
+   "range_low": 0.64,
+   "range_high": 1.15,
+   "unit": "ppm",
+   "mcl": 0.2,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "Lead",
+   "sample_date": null,
+   "level": 1.5,
+   "range_low": 0,
+   "range_high": 9.7,
+   "unit": "ppb",
+   "mcl": 15,
+   "mclg": 0,
+   "violation": "N",
+   "other_values": {
+    "# of Sites Above AL of Total Sites": 0
+   }
+  },
+  {
+   "system": "5020047",
+   "contaminant": "Copper",
+   "sample_date": null,
+   "level": 0.088,
+   "range_low": 0.03,
+   "range_high": 0.194,
+   "unit": "ppm",
+   "mcl": 1.3,
+   "mclg": 1.3,
+   "violation": "N",
+   "other_values": {
+    "# of Sites Above AL of Total Sites": 0
+   }
+  },
+  {
+   "system": "5020047",
+   "contaminant": "Turbidity",
+   "sample_date": "07/15/2024",
+   "level": 0.107,
+   "range_low": null,
+   "range_high": null,
+   "unit": "NTU",
+   "mcl": "TT=1 NTU for a single measurement",
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "Turbidity",
+   "sample_date": null,
+   "level": "100%",
+   "range_low": null,
+   "range_high": null,
+   "unit": "NTU",
+   "mcl": "TT= at least 95% of monthly samples\u22640.3 NTU",
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "5020047",
+   "contaminant": "TOC",
+   "sample_date": null,
+   "level": null,
+   "range_low": "24%",
+   "range_high": "50%",
+   "unit": null,
+   "mcl": "35%-45%",
+   "mclg": null,
+   "violation": "N",
+   "other_values": {
+    "Number of quarters out of compliance": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,403 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-9.1.1, pluggy-1.7.0
+cachedir: /tmp/pytest-cache
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 22 items
+
+tests/test_outputs.py ...FFFF..F.FFFF.FFF.FF                             [100%]
+
+=================================== FAILURES ===================================
+______________________ test_held_out_report[ar-beaverwd] _______________________
+
+name = 'ar-beaverwd'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: ar-beaverwd: score 0.7361 is below 0.95 (396 of 525 key facts, 13 extra; missing rows ['Alkalinity (Phenolphthalein)', 'Alkalinity (Total)', 'Calcium', 'Conductivity', 'Hardness (Total)', 'Magnesium', 'Nickel', 'Potassium']; wrong fields [{'contaminant': 'Nitrate (NO3-N)', 'fields': ['level']}, {'contaminant': 'Chlorite', 'fields': ['level']}, {'contaminant': 'Chlorine Dioxide', 'fields': ['level']}, {'contaminant': 'Fluoride (Average)', 'fields': ['range_low', 'range_high', 'unit']}])
+E       assert 0.7361 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+ar-beaverwd: score 0.7361 (396/525 key facts, 13 extra; 85 records for 113 in the key)
+_____________________ test_held_out_report[az-scottsdale] ______________________
+
+name = 'az-scottsdale'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: az-scottsdale: score 0.9296 is below 0.95 (198 of 207 key facts, 6 extra; missing rows ['Turbidity']; wrong fields [{'contaminant': 'Haloacetic Acids', 'fields': ['level']}, {'contaminant': 'Total Trihalomethanes (TTHMs)', 'fields': ['level']}, {'contaminant': 'Hardness', 'fields': ['unit']}, {'contaminant': 'Hardness', 'fields': ['unit']}])
+E       assert 0.9296 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+az-scottsdale: score 0.9296 (198/207 key facts, 6 extra; 43 records for 41 in the key)
+_______________________ test_held_out_report[ca-mammoth] _______________________
+
+name = 'ca-mammoth'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: ca-mammoth: score 0.5909 is below 0.95 (78 of 132 key facts, 0 extra; missing rows ['Chlorine Residual', 'Turbidity', 'Specific Conductance', 'Chloride', 'Total Coliform Bacteria', 'Fecal Coliform or E. coli']; wrong fields [{'contaminant': 'Turbidity', 'fields': ['level', 'unit', 'mcl']}, {'contaminant': 'Hardness', 'fields': ['level']}, {'contaminant': 'Sodium', 'fields': ['level']}, {'contaminant': 'Haloacetic Acids', 'fields': ['sample_date', 'level', 'range_low', 'range_high']}])
+E       assert 0.5909 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+ca-mammoth: score 0.5909 (78/132 key facts, 0 extra; 14 records for 20 in the key)
+_______________________ test_held_out_report[co-boulder] _______________________
+
+name = 'co-boulder'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: co-boulder: score 0.7718 is below 0.95 (115 of 135 key facts, 14 extra; missing rows ['Total Organic Carbon Removal Ratio', 'Total Organic Carbon Removal Ratio']; wrong fields [{'contaminant': 'Lead', 'fields': ['violation']}, {'contaminant': 'Copper', 'fields': ['violation']}, {'contaminant': 'Sodium (secondary standard)', 'fields': ['mcl', 'mclg']}])
+E       assert 0.7718 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+co-boulder: score 0.7718 (115/135 key facts, 14 extra; 15 records for 15 in the key)
+____________________ test_held_out_report[ga-athensclarke] _____________________
+
+name = 'ga-athensclarke'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: ga-athensclarke: score 0.2135 is below 0.95 (19 of 83 key facts, 6 extra; missing rows ['Fluoride', 'Nitrate (Nitrogen)', 'Haloacetic Acids', 'Filtered Turbidity', 'Filtered Turbidity', 'Total Trihalomethanes (TTHMS)', 'Chlorine']; wrong fields [{'contaminant': 'Lead', 'fields': ['level', 'range_low', 'range_high']}, {'contaminant': 'Copper', 'fields': ['level', 'range_low', 'range_high']}, {'contaminant': 'Total Organic Carbon', 'fields': ['level', 'mcl', 'violation']}])
+E       assert 0.2135 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+ga-athensclarke: score 0.2135 (19/83 key facts, 6 extra; 4 records for 10 in the key)
+_____________________ test_held_out_report[in-bloomington] _____________________
+
+name = 'in-bloomington'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: in-bloomington: score 0.7303 is below 0.95 (65 of 89 key facts, 0 extra; missing rows []; wrong fields [{'contaminant': '2,4-D', 'fields': ['system']}, {'contaminant': 'Fluoride', 'fields': ['system']}, {'contaminant': 'Barium', 'fields': ['system']}, {'contaminant': 'Combined Radium 226/228', 'fields': ['system']}])
+E       assert 0.7303 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+in-bloomington: score 0.7303 (65/89 key facts, 0 extra; 13 records for 13 in the key)
+______________________ test_held_out_report[ks-kucampus] _______________________
+
+name = 'ks-kucampus'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: ks-kucampus: score 0.6323 is below 0.95 (196 of 310 key facts, 0 extra; missing rows ['Alkalinity', 'Bromide', 'Calcium', 'Specific Conductance', 'Copper', 'Corrosivity', 'Hardness, Calcium as CaCO4', 'Hardness, Magnesium as CaCO3']; wrong fields [{'contaminant': 'Radium Isotope 228', 'fields': ['level']}, {'contaminant': 'Total Trihalomethanes (TTHM)', 'fields': ['level']}, {'contaminant': 'Total Haloacetic Acids (HAA)', 'fields': ['level']}, {'contaminant': 'Chloramine', 'fields': ['level']}])
+E       assert 0.6323 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+ks-kucampus: score 0.6323 (196/310 key facts, 0 extra; 31 records for 52 in the key)
+______________________ test_held_out_report[mi-annarbor] _______________________
+
+name = 'mi-annarbor'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: mi-annarbor: score 0.7153 is below 0.95 (196 of 243 key facts, 31 extra; missing rows ['Perfluorooctanoic acid (PFOA), Perfluorooctane sulfonic acid (PFOS), Perfluorohexane sulfonic acid (PFHxS), Hexafluoropropylene oxide dimer acid (HFPO-DA), Perfluorononanoic acid (PFNA), Perfluorobutane sulfonic acid (PFBS), Perfluorohexanoic acid (PFHxA)', 'Perfluoropentanoic acid (PFPeA)', 'Perfluorobutanoic acid (PFBA)', 'Perfluorobutanesulfonic acid (PFBS)']; wrong fields [{'contaminant': 'Chloramines', 'fields': ['level']}, {'contaminant': 'Bromate', 'fields': ['level']}, {'contaminant': 'Total Organic Carbon (TOC)', 'fields': ['unit']}, {'contaminant': 'Copper', 'fields': ['range_low', 'range_high']}])
+E       assert 0.7153 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+mi-annarbor: score 0.7153 (196/243 key facts, 31 extra; 49 records for 46 in the key)
+_____________________ test_held_out_report[mn-minneapolis] _____________________
+
+name = 'mn-minneapolis'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: mn-minneapolis: score 0.7222 is below 0.95 (65 of 90 key facts, 0 extra; missing rows ['Turbidity']; wrong fields [{'contaminant': 'Fluoride', 'fields': ['violation']}, {'contaminant': 'Copper', 'fields': ['range_low', 'range_high', 'violation']}, {'contaminant': 'Lead', 'fields': ['range_low', 'range_high', 'violation']}, {'contaminant': 'Chloramine', 'fields': ['range_low', 'range_high', 'violation']}])
+E       assert 0.7222 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+mn-minneapolis: score 0.7222 (65/90 key facts, 0 extra; 13 records for 14 in the key)
+________________________ test_held_out_report[or-eweb] _________________________
+
+name = 'or-eweb'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: or-eweb: score 0.7424 is below 0.95 (49 of 64 key facts, 2 extra; missing rows ['Total Trihalomethanes', 'Haloacetic Acids']; wrong fields [{'contaminant': 'Turbidity', 'fields': ['unit', 'mcl', 'violation']}])
+E       assert 0.7424 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+or-eweb: score 0.7424 (49/64 key facts, 2 extra; 9 records for 10 in the key)
+______________________ test_held_out_report[sc-florence] _______________________
+
+name = 'sc-florence'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: sc-florence: score 0.2963 is below 0.95 (32 of 87 key facts, 21 extra; missing rows ['Copper-action level at consumer taps', 'Lead-action level at consumer taps', 'Chlorine', 'HAAs [Haloacetic Acids] (HAA5)', 'TTHMs [Total Trihalomethanes]', 'Turbidity - Highest single measurement', 'Turbidity - Lowest monthly % meeting limit']; wrong fields [])
+E       assert 0.2963 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+sc-florence: score 0.2963 (32/87 key facts, 21 extra; 10 records for 11 in the key)
+_________________________ test_held_out_report[tn-kub] _________________________
+
+name = 'tn-kub'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: tn-kub: score 0.5128 is below 0.95 (60 of 117 key facts, 0 extra; missing rows ['Fluoride', 'Total Organic Carbon (Source)', 'Total Organic Carbon (Tap)', 'Total Trihalomethanes (THM)', 'Haloacetic Acids (HAA)', 'Chlorine', 'Chlorite']; wrong fields [{'contaminant': 'Nitrate', 'fields': ['level']}, {'contaminant': 'Chlorine Dioxide', 'fields': ['level']}, {'contaminant': 'Lead', 'fields': ['level', 'mcl', 'mclg']}, {'contaminant': 'Copper', 'fields': ['level', 'mcl', 'mclg']}])
+E       assert 0.5128 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+tn-kub: score 0.5128 (60/117 key facts, 0 extra; 19 records for 26 in the key)
+______________________ test_held_out_report[vt-richmond] _______________________
+
+name = 'vt-richmond'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: vt-richmond: score 0.3546 is below 0.95 (50 of 141 key facts, 0 extra; missing rows ['PFHpA', 'PFNA', 'PFHxS', 'PFOA', 'PFOS', 'Sum of 5 regulated PFAS compounds', 'PFHpA', 'PFNA']; wrong fields [{'contaminant': 'Total Trihalomethanes (TTHM)', 'fields': ['level']}])
+E       assert 0.3546 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+vt-richmond: score 0.3546 (50/141 key facts, 0 extra; 6 records for 24 in the key)
+______________________ test_held_out_report[wa-whitworth] ______________________
+
+name = 'wa-whitworth'
+
+    @pytest.mark.parametrize("name", DOCS)
+    def test_held_out_report(name):
+        """Each unseen report must score at least 0.95 (share of key facts recovered)."""
+        pred = run_extractor(name)
+        key = ccrscore.load_records(os.path.join(KEYS, f"{name}.json"))
+        result = ccrscore.score_doc(key, pred)
+        print(
+            f"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, "
+            f"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)"
+        )
+>       assert result["score"] >= PASS_SCORE, (
+            f"{name}: score {result['score']:.4f} is below {PASS_SCORE} "
+            f"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; "
+            f"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})"
+        )
+E       AssertionError: wa-whitworth: score 0.5362 is below 0.95 (37 of 69 key facts, 0 extra; missing rows ['PFOA', 'PFOA', 'PFOS', 'PFOS']; wrong fields [{'contaminant': 'VOC', 'fields': ['system', 'violation']}, {'contaminant': 'Gross Alpha', 'fields': ['system', 'violation']}, {'contaminant': 'Radium 228', 'fields': ['system', 'violation']}, {'contaminant': 'Arsenic -IOC', 'fields': ['system', 'violation']}])
+E       assert 0.5362 >= 0.95
+
+tests/test_outputs.py:162: AssertionError
+----------------------------- Captured stdout call -----------------------------
+wa-whitworth: score 0.5362 (37/69 key facts, 0 extra; 7 records for 11 in the key)
+==================================== PASSES ====================================
+______________________ test_held_out_report[ak-unalaska] _______________________
+----------------------------- Captured stdout call -----------------------------
+ak-unalaska: score 0.9661 (57/59 key facts, 0 extra; 7 records for 7 in the key)
+________________________ test_held_out_report[de-dover] ________________________
+----------------------------- Captured stdout call -----------------------------
+de-dover: score 0.9890 (179/181 key facts, 0 extra; 21 records for 21 in the key)
+______________________ test_held_out_report[fl-capecoral] ______________________
+----------------------------- Captured stdout call -----------------------------
+fl-capecoral: score 1.0000 (114/114 key facts, 0 extra; 16 records for 16 in the key)
+_____________________ test_held_out_report[hi-kauai-lihue] _____________________
+----------------------------- Captured stdout call -----------------------------
+hi-kauai-lihue: score 1.0000 (102/102 key facts, 0 extra; 13 records for 13 in the key)
+______________________ test_held_out_report[mt-whitefish] ______________________
+----------------------------- Captured stdout call -----------------------------
+mt-whitefish: score 0.9796 (96/98 key facts, 0 extra; 11 records for 11 in the key)
+________________ test_held_out_report[va-kinggeorge-canterbury] ________________
+----------------------------- Captured stdout call -----------------------------
+va-kinggeorge-canterbury: score 0.9750 (78/80 key facts, 0 extra; 10 records for 10 in the key)
+=========================== short test summary info ============================
+PASSED tests/test_outputs.py::test_extractor_exists
+PASSED tests/test_outputs.py::test_held_out_set_is_complete
+PASSED tests/test_outputs.py::test_held_out_report[ak-unalaska]
+PASSED tests/test_outputs.py::test_held_out_report[de-dover]
+PASSED tests/test_outputs.py::test_held_out_report[fl-capecoral]
+PASSED tests/test_outputs.py::test_held_out_report[hi-kauai-lihue]
+PASSED tests/test_outputs.py::test_held_out_report[mt-whitefish]
+PASSED tests/test_outputs.py::test_held_out_report[va-kinggeorge-canterbury]
+FAILED tests/test_outputs.py::test_held_out_report[ar-beaverwd] - AssertionEr...
+FAILED tests/test_outputs.py::test_held_out_report[az-scottsdale] - Assertion...
+FAILED tests/test_outputs.py::test_held_out_report[ca-mammoth] - AssertionErr...
+FAILED tests/test_outputs.py::test_held_out_report[co-boulder] - AssertionErr...
+FAILED tests/test_outputs.py::test_held_out_report[ga-athensclarke] - Asserti...
+FAILED tests/test_outputs.py::test_held_out_report[in-bloomington] - Assertio...
+FAILED tests/test_outputs.py::test_held_out_report[ks-kucampus] - AssertionEr...
+FAILED tests/test_outputs.py::test_held_out_report[mi-annarbor] - AssertionEr...
+FAILED tests/test_outputs.py::test_held_out_report[mn-minneapolis] - Assertio...
+FAILED tests/test_outputs.py::test_held_out_report[or-eweb] - AssertionError:...
+FAILED tests/test_outputs.py::test_held_out_report[sc-florence] - AssertionEr...
+FAILED tests/test_outputs.py::test_held_out_report[tn-kub] - AssertionError: ...
+FAILED tests/test_outputs.py::test_held_out_report[vt-richmond] - AssertionEr...
+FAILED tests/test_outputs.py::test_held_out_report[wa-whitworth] - AssertionE...
+======================== 14 failed, 8 passed in 33.76s =========================

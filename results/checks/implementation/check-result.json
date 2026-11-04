@@ -1,0 +1,142 @@
+{
+  "verifiable": {
+    "outcome": "pass",
+    "explanation": "The verifier runs pytest against a fixed set of 20 held-out PDFs with pre-built answer keys baked into the verifier image, scoring each report deterministically via score.py (numeric tolerance 1e-6, fixed normalization rules for names/units/dates). I ran the reference solution against all 20 hidden reports and reproduced the exact calibration numbers in the README (e.g. az-scottsdale scored exactly 198/207 = 0.9565). No network installs occur in test.sh; all dependencies are baked into tests/Dockerfile. The process is fully deterministic and programmatic."
+  },
+  "solvable": {
+    "outcome": "pass",
+    "explanation": "I independently ran solution/extract.py (with its ccr_layout/ccr_tables/ccr_values/ccr_records modules) against all 4 visible and all 20 hidden reports; it passed all 24 (20/20 hidden, 4/4 visible) at the 0.95 threshold, matching the README's claimed calibration results exactly. The solution is a genuine, substantial but scoped PDF-layout-extraction pipeline (~2233 lines) consistent with the stated 8-hour expert estimate."
+  },
+  "difficult": {
+    "outcome": "pass",
+    "explanation": "The task requires building a general PDF table-extraction pipeline that must generalize across 20 real, structurally diverse CCR report layouts (ruled/unruled tables, merged cells, multi-column groupings, sideways tables, sub-rows) with no internal arithmetic to cross-check an extraction. The README reports that three independent frontier-model submissions (Opus 5.5 and a comparison model) only passed 1-6 of 20 reports, evidencing genuine difficulty beyond an average undergraduate exercise."
+  },
+  "interesting": {
+    "outcome": "pass",
+    "explanation": "Extracting structured contaminant data from heterogeneous, real-world water utility reports is a realistic data-engineering / environmental-compliance problem (e.g. for data engineers building water-quality ingestion pipelines or analysts compiling cross-utility data), not a contrived puzzle."
+  },
+  "outcome_verified": {
+    "outcome": "pass",
+    "explanation": "Grading only inspects the output JSON produced by extract.py against the answer keys (via score_doc in score.py); it imposes no constraint on implementation approach, libraries, or algorithm used to produce that output."
+  },
+  "anti_cheat_robustness": {
+    "outcome": "pass",
+    "explanation": "The 20 hidden PDFs and their answer keys live only in the verifier image under /tests, chmod go-rwx (root-only), and the agent container is torn down before the verifier runs (separate-verifier mode), so the agent cannot read or infer the keys. The submitted extractor is reset from a root-only pristine copy before every report run, preventing an extractor from caching results across runs or tampering with subsequent grading. No answers are present in the agent image or in /app at task start."
+  },
+  "task_security": {
+    "outcome": "pass",
+    "explanation": "Reviewed both Dockerfiles, test.sh, score.py, test_outputs.py, and all solution scripts: no credential exfiltration, no external network calls beyond build-time pip/apt installs, no obfuscated code, no destructive operations, and no prompt injection. Scanned all PDFs (visible and hidden) for embedded JavaScript; none found."
+  },
+  "functional_verification": {
+    "outcome": "pass",
+    "explanation": "The verifier executes the agent's extract.py as a subprocess on real PDFs and parses/compares the resulting JSON records numerically and semantically (score_doc); it performs no source-code string/keyword scanning of the agent's submission."
+  },
+  "deterministic_reproducible": {
+    "outcome": "pass",
+    "explanation": "All Python dependencies (pdfplumber, pypdf, pytest, pytest-json-ctrf) are pinned to exact versions identically in both environment/Dockerfile and tests/Dockerfile; apt packages (poppler-utils) are correctly left unpinned per apt convention. No live external services are used. Re-running the reference solution reproduced identical per-report scores to those documented in the README."
+  },
+  "essential_difficulty": {
+    "outcome": "pass",
+    "explanation": "score.py's matching/comparison logic (numeric tolerance, unit normalization ignoring \u00b5/u and spacing, flexible violation-flag forms, fuzzy contaminant-name matching) is deliberately lenient toward formatting variance, so that failures stem from misreading a table's structure/values rather than clerical formatting choices. The README documents that every fact the reference solution loses was audited and attributed to unfinished code or a dropped \u00b5 character, not to formatting ambiguity."
+  },
+  "test_instruction_alignment": {
+    "outcome": "pass",
+    "explanation": "The sole requirements in instruction.md (write /app/extractor/extract.py, run as `python3 extract.py <pdf> <json>`, 120s per-report limit, no network, 0.95 score threshold per report, all held-out reports must pass) map directly onto test_outputs.py's test_extractor_exists, per-report subprocess invocation with TIME_LIMIT_SEC=120, and PASS_SCORE=0.95 parametrized over all 20 docs. No extraneous requirements are tested beyond what FORMAT.md (referenced normatively by the instruction) specifies."
+  },
+  "novel": {
+    "outcome": "pass",
+    "explanation": "Mapping the specific, varied physical layouts of 20 real, previously-unseen CCR reports to a normalized schema is not a standard textbook exercise or memorizable problem; the evidence that frontier LLM submissions scored only 1-6/20 supports that this cannot be solved by recall alone."
+  },
+  "agentic": {
+    "outcome": "pass",
+    "explanation": "Solving this requires iterative exploration (reading FORMAT.md, visible PDF/JSON pairs), writing and debugging a multi-file extraction pipeline, and repeatedly testing against the visible examples to converge on a working general solution -- this cannot be done via a single zero-shot generation."
+  },
+  "reviewable": {
+    "outcome": "pass",
+    "explanation": "A non-specialist reviewer can read FORMAT.md's explicit field rules, the four visible PDF/JSON example pairs, run solve.sh to see the reference pass, and run score.py manually (as I did) to confirm the stated calibration numbers. The README documents the keys' provenance (two independent readings settled on page images) and gives concrete, checkable calibration results rather than hardcoded unexplained values."
+  },
+  "instruction_concision": {
+    "outcome": "pass",
+    "explanation": "instruction.md is short, uses absolute paths throughout, states the goal (write an extractor matching FORMAT.md) without prescribing an algorithm or step-by-step procedure. It mentions pre-installed libraries (pdfplumber, pypdf, poppler-utils) and the no-network constraint, which is a reasonable disclosure of environment constraints (since no internet means the agent cannot simply try installing other tools) rather than a solution hint."
+  },
+  "solution_quality": {
+    "outcome": "pass",
+    "explanation": "The solution performs genuine computation: pdfplumber-based layout parsing, ruling/whitespace-based table segmentation, column-role assignment, and record building, organized into separate files (ccr_layout.py, ccr_tables.py, ccr_values.py, ccr_records.py, extract.py) rather than inlined heredocs in solve.sh. solve.sh only copies these files and runs a short self-check heredoc against the visible examples, which is appropriate verification code, not the solution itself."
+  },
+  "separate_verifier_configured": {
+    "outcome": "pass",
+    "explanation": "verifier.environment_mode = \"separate\" is set; artifacts = [\"/app/extractor\"] is the only input the verifier needs from the agent, and it is declared at root level. tests/Dockerfile bakes all verifier tooling (pdfplumber, pypdf, pytest, pytest-json-ctrf, poppler-utils) and COPYs '.' into /tests/; test.sh performs no runtime installs. Shared pinned versions (pdfplumber==0.11.10, pypdf==6.16.2) match exactly between environment/Dockerfile and tests/Dockerfile."
+  },
+  "environment_hygiene": {
+    "outcome": "pass",
+    "explanation": "environment/Dockerfile only COPYs environment/data/* (FORMAT.md, visible examples, stub extractor) -- no tests/ or solution/ content, and no test-only dependencies (pytest, pytest-json-ctrf) are installed in the agent image. tests/Dockerfile owns all test-only tooling and the hidden/keys data, chmod go-rwx'd for root-only access. Both Dockerfiles follow correct apt hygiene (update before install, cache cleanup after, unpinned apt packages)."
+  },
+  "structured_data_schema": {
+    "outcome": "pass",
+    "explanation": "FORMAT.md is an explicit, normative schema specification with a full field table (system, contaminant, sample_date, level, range_low, range_high, unit, mcl, mclg, violation, location, other_values), describing exactly which fields are graded and the parsing/null rules for each, plus a worked JSON example."
+  },
+  "typos": {
+    "outcome": "pass",
+    "explanation": "Reviewed instruction.md, FORMAT.md, task.toml, README.md, Dockerfiles, test.sh, test_outputs.py, score.py, and solution file names/imports; found no typos in filenames, paths, commands, or variable/module names. All cross-references (e.g. /app/extractor/extract.py, /app/FORMAT.md, /app/visible) are consistent across files."
+  },
+  "difficulty_explanation_quality": {
+    "outcome": "pass",
+    "explanation": "The README's Difficulty explanation describes the concrete source of difficulty (layout diversity across utilities, lack of an internal arithmetic cross-check, real-document irregularities like merged cells and footnotes), frames it for both a human reader ('the way a person reading the report would') and an agent, states the data is real (downloaded from utility websites, not synthetic), and names the real-world practitioners (data engineer, environmental analyst) who would do this work."
+  },
+  "solution_explanation_quality": {
+    "outcome": "pass",
+    "explanation": "The README's Solution explanation gives a coherent high-level pipeline description (positioned words with footnote-flagging, column splitting by gutters, heading-based table discovery, ruling/whitespace-based extents, column-role assignment per FORMAT.md, row joining for merged/sub-rows) that I verified is congruent with the actual module structure and docstring of solution/extract.py (ccr_layout -> ccr_tables -> ccr_records, find_pwsid in ccr_values)."
+  },
+  "verification_explanation_quality": {
+    "outcome": "pass",
+    "explanation": "The README's Verification explanation precisely matches what I found in test_outputs.py and score.py (pristine-copy reset per report, nobody-user execution, 120s limit, root-only reward directory, OOM handling, lenient matching/normalization rules for names/units/numbers/dates/violation flags). It explicitly justifies the 0.05 pass-threshold allowance (\u00b5-character text-layer drops, occasional long-report slips) and gives verifiable calibration numbers, which I reproduced exactly by re-running the reference solution (az-scottsdale 198/207 = 0.9565)."
+  },
+  "category_and_tags": {
+    "outcome": "pass",
+    "explanation": "category = \"Software\" with subcategory = \"Data engineering\" fits a PDF-table/document-extraction pipeline task well. Tags (document-extraction, pdf-tables, real-documents, layout-generalization, drinking-water, data-engineering) are specific and discoverable, not generic placeholders."
+  },
+  "task_name": {
+    "outcome": "pass",
+    "explanation": "The task.toml name field resolves to the slug \"water-report-extraction\" (from \"terminal-bench/water-report-extraction\"), which is a concise, descriptive, kebab-case, 3-word identifier that conveys the task's subject matter without needing to open files."
+  },
+  "resource_configuration": {
+    "outcome": "pass",
+    "explanation": "Agent timeout (7200s/2h) and verifier timeout (3600s) are scaled up from template defaults to match the task's real difficulty (building a general extraction pipeline, then running it against 20 reports up to 120s each). cpus=2 and memory_mb=4096 are modestly increased, plausibly justified by some hidden PDFs being multi-megabyte, multi-page documents (up to ~10MB); storage_mb is left at the default 10240, which comfortably covers the ~45MB of hidden PDFs plus dependencies. Resource increases are modest and do not substitute for intellectual difficulty."
+  },
+  "task_readme": {
+    "outcome": "pass",
+    "explanation": "README.md contains all required sections (Difficulty explanation, Solution explanation, Verification explanation, Relevant experience) plus a task metadata summary, with no redundant restatement of the instruction or solution code beyond what's needed for reviewer context."
+  },
+  "expert_time_estimate": {
+    "outcome": "pass",
+    "explanation": "expert_time_estimate_hours = 8.0 is non-zero and plausible given the ~2233-line reference solution and the described scope (a general PDF layout/table extraction pipeline covering many real-world edge cases), and is consistent with the README's stated 8-hour expert time and its described difficulty."
+  },
+  "task_toml_schema": {
+    "outcome": "pass",
+    "explanation": "task.toml uses only the documented root-level fields (schema_version, task, metadata, verifier, agent, environment, solution, artifacts) and documented subfields within [metadata], [verifier], [verifier.environment], [agent], [environment], [environment.env], [solution.env]. No invented fields (e.g. no 'skills', 'prerequisites', or similar) appear anywhere in the file."
+  },
+  "no_extraneous_files": {
+    "outcome": "pass",
+    "explanation": "Every file traced to a purpose: environment/data/* is COPY'd by environment/Dockerfile, solution/*.py is used by solution/solve.sh, tests/hidden and tests/keys are consumed by tests/test_outputs.py and tests/score.py, and all scaffold files (task.toml, instruction.md, README.md, Dockerfiles) are required. No cruft, backups, or unused assets were found."
+  },
+  "artifact_efficiency": {
+    "outcome": "pass",
+    "explanation": "The only declared artifact is /app/extractor, which is exactly the agent's deliverable (its extract.py and any supporting modules it wrote) -- a small, necessary transfer with no build-time-fixed or bulky content being shipped unnecessarily."
+  },
+  "verifier_execution_isolation": {
+    "outcome": "pass",
+    "explanation": "test_outputs.py executes the agent's extract.py via subprocess with preexec_fn=_as_nobody (setgroups([]), setgid/setuid to the nobody uid, OOM score adjustment), never importing agent code into the root pytest process. /logs/verifier is chmod 700 before any agent code runs, and the reward is derived by the root test.sh from pytest's exit code after the run, with leftover processes under uid nobody killed via _kill_leftovers."
+  },
+  "ctrf_reporting": {
+    "outcome": "pass",
+    "explanation": "test.sh invokes pytest with --ctrf /logs/verifier/ctrf.json against tests/test_outputs.py, writing per-report (per-test) CTRF results that preserve which of the 20 held-out reports passed or failed, in addition to the binary reward."
+  },
+  "do_not_modify_enforced": {
+    "outcome": "not_applicable",
+    "explanation": "instruction.md contains no 'do not modify/delete/preserve' constraint on any concrete artifact; the agent is free to create and modify anything under /app/extractor."
+  },
+  "binary_reward": {
+    "outcome": "pass",
+    "explanation": "test.sh only ever writes reward.txt as exactly 0 (initial default and on pytest failure) or 1 (on pytest success, i.e. all 20 parametrized per-report tests passing at their internal 0.95 threshold); score_doc's continuous 0-1 score is used only inside the pytest assertion (thresholded at 0.95) and never written directly as the reward."
+  }
+}

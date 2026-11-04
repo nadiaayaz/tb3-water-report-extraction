@@ -1,0 +1,2 @@
+harbor check tasks/water-report-extraction --rubric configs/task-implementation.toml --agent claude-code --model anthropic/claude-sonnet-5 --ae CLAUDE_FORCE_OAUTH=1 --ae CLAUDE_CODE_OAUTH_TOKEN=<token> -c configs/check-job.json
+# Run from the repository root. configs/task-implementation.toml is a copy of harbor-framework/terminal-bench docs/prompts/task-implementation.toml (sha256 19b879cd424cc22cc2f56d8f80ed98c9c386a8df0885377f7cb9d4ebab21df5a, the rubric_sha256 in run.json).

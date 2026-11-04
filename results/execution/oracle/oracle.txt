@@ -1,0 +1,4 @@
+mn-mankato: 11 records (key 11), 11 of 11 key contaminants found -> ok
+ny-medina: 22 records (key 22), 22 of 22 key contaminants found -> ok
+oh-toledo: 12 records (key 12), 12 of 12 key contaminants found -> ok
+pa-reserve: 17 records (key 17), 17 of 17 key contaminants found -> ok

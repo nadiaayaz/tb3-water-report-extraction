@@ -1,0 +1,160 @@
+{
+ "records": [
+  {
+   "system": "IN 5253002",
+   "contaminant": "Total Organic Carbon (TOC)",
+   "sample_date": null,
+   "level": 40.5,
+   "range_low": null,
+   "range_high": null,
+   "unit": "%",
+   "mcl": "minimum 35% removal",
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "IN 5253002",
+   "contaminant": "Turbidity",
+   "sample_date": null,
+   "level": 1.3,
+   "range_low": null,
+   "range_high": null,
+   "unit": "turbidity units",
+   "mcl": "Treatment Technique (TT)",
+   "mclg": null,
+   "violation": "Y"
+  },
+  {
+   "system": "IN 5253002",
+   "contaminant": "Beta/photon emitters",
+   "sample_date": null,
+   "level": 3.3,
+   "range_low": null,
+   "range_high": null,
+   "unit": "pCi/L",
+   "mcl": 50,
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "IN 5253002",
+   "contaminant": "Gross alpha excluding radon and uranium",
+   "sample_date": null,
+   "level": 0.1,
+   "range_low": null,
+   "range_high": null,
+   "unit": "pCi/L",
+   "mcl": 15,
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "IN 5253002",
+   "contaminant": "Combined Radium 226/228",
+   "sample_date": null,
+   "level": 0.37,
+   "range_low": null,
+   "range_high": null,
+   "unit": "pCi/L",
+   "mcl": 5,
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "IN 5253002",
+   "contaminant": "Barium",
+   "sample_date": null,
+   "level": 0.015,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": 2,
+   "mclg": 2,
+   "violation": "N"
+  },
+  {
+   "system": "IN 5253002",
+   "contaminant": "Copper",
+   "sample_date": null,
+   "level": 0.035,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": "TT; Action Level = 1.3 ppm",
+   "mclg": 1.3,
+   "violation": "N"
+  },
+  {
+   "system": "IN 5253002",
+   "contaminant": "Chloramines (as Chlorine)",
+   "sample_date": null,
+   "level": 3.5,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": 4.0,
+   "mclg": 4,
+   "violation": "N"
+  },
+  {
+   "system": "IN 5253002",
+   "contaminant": "Fluoride",
+   "sample_date": null,
+   "level": 0.48,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": 4,
+   "mclg": 4,
+   "violation": "N"
+  },
+  {
+   "system": "IN 5253002",
+   "contaminant": "Lead",
+   "sample_date": null,
+   "level": 3.3,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppb",
+   "mcl": "TT; Action Level = 15 ppb",
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "IN 5253002",
+   "contaminant": "Total Trihalomethanes (TTHM)",
+   "sample_date": null,
+   "level": 48.2,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppb",
+   "mcl": 80,
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "IN 5253002",
+   "contaminant": "Haloacetic Acids (HAA5)",
+   "sample_date": null,
+   "level": 35.1,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppb",
+   "mcl": 60,
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "IN 5253002",
+   "contaminant": "2,4-D",
+   "sample_date": null,
+   "level": 0.21,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppb",
+   "mcl": 70,
+   "mclg": 70,
+   "violation": "N"
+  }
+ ]
+}

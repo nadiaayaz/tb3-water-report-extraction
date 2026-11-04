@@ -1,0 +1,347 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-10-26T22:57:37.865937+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.1.1"
+        },
+        "summary": {
+            "tests": 22,
+            "passed": 2,
+            "failed": 20,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1793055456773,
+            "stop": 1793055457864
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_extractor_exists",
+                "status": "passed",
+                "duration": 2,
+                "start": 1793055456812,
+                "stop": 1793055456814,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_set_is_complete",
+                "status": "passed",
+                "duration": 9,
+                "start": 1793055456814,
+                "stop": 1793055456823,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 123,
+                "start": 1793055456823,
+                "stop": 1793055456946,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'ak-unalaska'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: ak-unalaska: score 0.0000 is below 0.95 (0 of 59 key facts, 0 extra; missing rows ['Turbidity', 'Chlorine', 'Total Trihalomethanes', 'Haloacetic Acids', 'Nitrate [measured as Nitrogen]', 'Lead', 'Copper']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 32,
+                "start": 1793055456946,
+                "stop": 1793055456978,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'ar-beaverwd'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: ar-beaverwd: score 0.0000 is below 0.95 (0 of 525 key facts, 0 extra; missing rows ['Alkalinity (Phenolphthalein)', 'Alkalinity (Total)', 'Calcium', 'Conductivity', 'Hardness (Total)', 'Magnesium', 'Nickel', 'Potassium']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 67,
+                "start": 1793055456978,
+                "stop": 1793055457045,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'az-scottsdale'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: az-scottsdale: score 0.0000 is below 0.95 (0 of 207 key facts, 0 extra; missing rows ['Arsenic', 'Barium', 'Chromium', 'Fluoride', 'Nickel', 'Nitrate', 'Selenium', 'Alpha Emitters']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 34,
+                "start": 1793055457046,
+                "stop": 1793055457080,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'ca-mammoth'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: ca-mammoth: score 0.0000 is below 0.95 (0 of 132 key facts, 0 extra; missing rows ['Arsenic', 'Fluoride', 'Gross Alpha', 'TTHMs [Total trihalomethanes]', 'Haloacetic Acids', 'Chlorine Residual', 'Turbidity', 'Turbidity']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 32,
+                "start": 1793055457080,
+                "stop": 1793055457112,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'co-boulder'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: co-boulder: score 0.0000 is below 0.95 (0 of 135 key facts, 0 extra; missing rows ['Chlorine', 'Barium', 'Chromium', 'Fluoride', 'Sodium (secondary standard)', 'Nitrate', 'Turbidity', 'Turbidity']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 25,
+                "start": 1793055457113,
+                "stop": 1793055457138,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'de-dover'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: de-dover: score 0.0000 is below 0.95 (0 of 181 key facts, 0 extra; missing rows ['Arsenic (As)', 'Chlorine (Cl)', 'Fluoride (F)', 'Nitrate (NO3)', 'Nitrite (NO2)', 'Alpha emitters', 'Radium-226', 'Radium-228']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 55,
+                "start": 1793055457138,
+                "stop": 1793055457193,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'fl-capecoral'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: fl-capecoral: score 0.0000 is below 0.95 (0 of 114 key facts, 0 extra; missing rows ['Alpha Emitters', 'Combined Radium', 'Alpha Emitters', 'Combined Radium', 'Barium', 'Fluoride', 'Sodium', 'Barium']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 55,
+                "start": 1793055457193,
+                "stop": 1793055457248,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'ga-athensclarke'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: ga-athensclarke: score 0.0000 is below 0.95 (0 of 83 key facts, 0 extra; missing rows ['Fluoride', 'Nitrate (Nitrogen)', 'Haloacetic Acids', 'Filtered Turbidity', 'Filtered Turbidity', 'Total Trihalomethanes (TTHMS)', 'Chlorine', 'Total Organic Carbon']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 52,
+                "start": 1793055457248,
+                "stop": 1793055457300,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'hi-kauai-lihue'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: hi-kauai-lihue: score 0.0000 is below 0.95 (0 of 102 key facts, 0 extra; missing rows ['Barium', 'Chromium', 'Nitrate', '1,2,3,-Trichloropropane', 'TTHMs (Total trihalomethanes)', 'HAA (Haloacetic Acid)', 'Lead', 'Copper']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 30,
+                "start": 1793055457300,
+                "stop": 1793055457330,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'in-bloomington'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: in-bloomington: score 0.0000 is below 0.95 (0 of 89 key facts, 0 extra; missing rows ['Total Organic Carbon (TOC)', 'Turbidity', 'Beta/photon emitters', 'Gross alpha excluding radon and uranium', 'Combined Radium 226/228', 'Barium', 'Copper', 'Chloramines (as Chlorine)']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 30,
+                "start": 1793055457330,
+                "stop": 1793055457360,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'ks-kucampus'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: ks-kucampus: score 0.0000 is below 0.95 (0 of 310 key facts, 0 extra; missing rows ['Escherichia coli Bacteria (E. coli = EC)', 'Chloramine', 'Chloramine', 'Total Chlorine', 'Total Haloacetic Acids (HAA)', 'Total Trihalomethanes (TTHM)', 'Atrazine', '2,4-D']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 51,
+                "start": 1793055457360,
+                "stop": 1793055457411,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'mi-annarbor'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: mi-annarbor: score 0.0000 is below 0.95 (0 of 243 key facts, 0 extra; missing rows ['Bromate', 'Chloramines', 'Haloacetic Acids (HAA5)', 'Total Organic Carbon (TOC)', 'Total Trihalomethanes (TTHM)', 'Gross Alpha', 'Radium 226 and 228', 'Arsenic']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 66,
+                "start": 1793055457411,
+                "stop": 1793055457477,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'mn-minneapolis'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: mn-minneapolis: score 0.0000 is below 0.95 (0 of 90 key facts, 0 extra; missing rows ['Lead', 'Copper', 'Nitrate', 'Total Trihalomethanes, TTHMs', 'Total Haloacetic Acids, HAA', 'Chloramine', 'Turbidity', 'Fluoride']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 37,
+                "start": 1793055457479,
+                "stop": 1793055457516,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'mt-whitefish'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: mt-whitefish: score 0.0000 is below 0.95 (0 of 98 key facts, 0 extra; missing rows ['Copper', 'Lead', 'Chlorine', 'Haloacetic Acids (HAA5)', 'Total Trihalomethanes (TTHM)', 'Barium', 'Fluoride', 'Nitrate [measured as Nitrogen]']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 100,
+                "start": 1793055457516,
+                "stop": 1793055457616,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'or-eweb'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: or-eweb: score 0.0000 is below 0.95 (0 of 64 key facts, 0 extra; missing rows ['Barium', 'Fluoride', 'Nitrate', 'Total Trihalomethanes', 'Haloacetic Acids', 'Chlorine', 'Total Organic Carbon', 'Turbidity']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 30,
+                "start": 1793055457616,
+                "stop": 1793055457646,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'sc-florence'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: sc-florence: score 0.0000 is below 0.95 (0 of 87 key facts, 0 extra; missing rows ['Copper-action level at consumer taps', 'Lead-action level at consumer taps', 'Nitrate', 'Sodium [unregulated]', 'Combined Radium 226/228', 'Fluoride', 'Chlorine', 'HAAs [Haloacetic Acids] (HAA5)']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 105,
+                "start": 1793055457646,
+                "stop": 1793055457751,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'tn-kub'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: tn-kub: score 0.0000 is below 0.95 (0 of 117 key facts, 0 extra; missing rows ['Barium', 'Nitrate', 'Fluoride', 'Sodium', 'Total Organic Carbon (Source)', 'Total Organic Carbon (Tap)', 'Total Trihalomethanes (THM)', 'Haloacetic Acids (HAA)']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 56,
+                "start": 1793055457752,
+                "stop": 1793055457808,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'va-kinggeorge-canterbury'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: va-kinggeorge-canterbury: score 0.0000 is below 0.95 (0 of 80 key facts, 0 extra; missing rows ['Total Coliform Bacteria', 'HAA5 [Haloacetic acids five]', 'TTHMs [Total Trihalomethanes]', 'Barium', 'Fluoride', 'Nitrate [measured as Nitrogen]', 'Copper', 'Lead']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 26,
+                "start": 1793055457808,
+                "stop": 1793055457834,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'vt-richmond'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: vt-richmond: score 0.0000 is below 0.95 (0 of 141 key facts, 0 extra; missing rows ['Chlorine', 'Fluoride', 'Nitrate', 'PFHpA', 'PFNA', 'PFHxS', 'PFOA', 'PFOS']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 30,
+                "start": 1793055457834,
+                "stop": 1793055457864,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ],
+                "trace": "name = 'wa-whitworth'\n\n    @pytest.mark.parametrize(\"name\", DOCS)\n    def test_held_out_report(name):\n        \"\"\"Each unseen report must score at least 0.95 (share of key facts recovered).\"\"\"\n        pred = run_extractor(name)\n        key = ccrscore.load_records(os.path.join(KEYS, f\"{name}.json\"))\n        result = ccrscore.score_doc(key, pred)\n        print(\n            f\"{name}: score {result['score']:.4f} ({result['matched_facts']}/{result['key_facts']} key facts, \"\n            f\"{result['extra_facts']} extra; {result['pred_rows']} records for {result['key_rows']} in the key)\"\n        )\n>       assert result[\"score\"] >= PASS_SCORE, (\n            f\"{name}: score {result['score']:.4f} is below {PASS_SCORE} \"\n            f\"({result['matched_facts']} of {result['key_facts']} key facts, {result['extra_facts']} extra; \"\n            f\"missing rows {result['missing_rows'][:8]}; wrong fields {result['wrong_fields'][:4]})\"\n        )\nE       AssertionError: wa-whitworth: score 0.0000 is below 0.95 (0 of 69 key facts, 0 extra; missing rows ['Nitrate - IOC', 'Arsenic -IOC', 'Radium 228', 'Gross Alpha', 'VOC', 'Lead', 'Copper', 'PFOA']; wrong fields [])\nE       assert 0.0 >= 0.95\n\ntests/test_outputs.py:162: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

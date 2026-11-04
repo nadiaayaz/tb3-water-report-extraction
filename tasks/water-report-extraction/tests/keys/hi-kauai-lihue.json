@@ -1,0 +1,166 @@
+{
+ "records": [
+  {
+   "system": null,
+   "contaminant": "Barium",
+   "sample_date": "2024",
+   "level": 0.02,
+   "range_low": "ND",
+   "range_high": 0.02,
+   "unit": "ppm",
+   "mcl": 2,
+   "mclg": 2,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Chromium",
+   "sample_date": "2024",
+   "level": 7,
+   "range_low": "ND",
+   "range_high": 7,
+   "unit": "ppb",
+   "mcl": 100,
+   "mclg": 100,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Nitrate",
+   "sample_date": "2025",
+   "level": 1.9,
+   "range_low": "ND",
+   "range_high": 1.9,
+   "unit": "ppm",
+   "mcl": 10,
+   "mclg": 10,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "1,2,3,-Trichloropropane",
+   "sample_date": "2025",
+   "level": 0.1,
+   "range_low": "ND",
+   "range_high": 0.1,
+   "unit": "ppb",
+   "mcl": 0.6,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "TTHMs (Total trihalomethanes)",
+   "sample_date": "2025",
+   "level": 34,
+   "range_low": 5,
+   "range_high": 51,
+   "unit": "ppb",
+   "mcl": 80,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "HAA (Haloacetic Acid)",
+   "sample_date": "2025",
+   "level": 6,
+   "range_low": "ND",
+   "range_high": 8,
+   "unit": "ppb",
+   "mcl": 60,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Lead",
+   "sample_date": "2024",
+   "level": "<2.5",
+   "range_low": "ND",
+   "range_high": "ND",
+   "unit": "ppb",
+   "mcl": 10,
+   "mclg": 0,
+   "violation": null,
+   "other_values": {
+    "# of Sites Found Above AL": "0/35"
+   }
+  },
+  {
+   "system": null,
+   "contaminant": "Copper",
+   "sample_date": "2024",
+   "level": 0.17,
+   "range_low": "ND",
+   "range_high": 0.38,
+   "unit": "ppm",
+   "mcl": 1.3,
+   "mclg": 1.3,
+   "violation": null,
+   "other_values": {
+    "# of Sites Found Above AL": "0/35"
+   }
+  },
+  {
+   "system": null,
+   "contaminant": "Bromide",
+   "sample_date": "2020",
+   "level": 48,
+   "range_low": 17,
+   "range_high": 48,
+   "unit": "ppb",
+   "mcl": null,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Manganese",
+   "sample_date": "2020",
+   "level": 4.2,
+   "range_low": "ND",
+   "range_high": 4.2,
+   "unit": "ppb",
+   "mcl": 50,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Silica",
+   "sample_date": "2020",
+   "level": 28,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": null,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Sodium",
+   "sample_date": "2024",
+   "level": 56,
+   "range_low": 9,
+   "range_high": 56,
+   "unit": "ppm",
+   "mcl": null,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Sulfate",
+   "sample_date": "2025",
+   "level": 36,
+   "range_low": "ND",
+   "range_high": 36,
+   "unit": "ppm",
+   "mcl": 250,
+   "mclg": null,
+   "violation": "N"
+  }
+ ]
+}

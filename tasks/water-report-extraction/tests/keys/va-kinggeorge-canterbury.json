@@ -1,0 +1,133 @@
+{
+ "records": [
+  {
+   "system": "VA6099085",
+   "contaminant": "Total Coliform Bacteria",
+   "sample_date": "Monthly",
+   "level": 0,
+   "range_low": null,
+   "range_high": null,
+   "unit": "Present or Absent",
+   "mcl": "Presence of coliform bacteria in >1 sample per month",
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "VA6099085",
+   "contaminant": "HAA5 [Haloacetic acids five]",
+   "sample_date": "2023",
+   "level": 1.0,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppb",
+   "mcl": 60,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "VA6099085",
+   "contaminant": "TTHMs [Total Trihalomethanes]",
+   "sample_date": "2023",
+   "level": 2.9,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppb",
+   "mcl": 80,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "VA6099085",
+   "contaminant": "Barium",
+   "sample_date": "2023",
+   "level": 0.013,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": 2,
+   "mclg": 2,
+   "violation": "N"
+  },
+  {
+   "system": "VA6099085",
+   "contaminant": "Fluoride",
+   "sample_date": "2023",
+   "level": 0.63,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": null,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "VA6099085",
+   "contaminant": "Nitrate [measured as Nitrogen]",
+   "sample_date": "2024",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": 10,
+   "mclg": 10,
+   "violation": "N"
+  },
+  {
+   "system": "VA6099085",
+   "contaminant": "Copper",
+   "sample_date": "2022",
+   "level": 0.07,
+   "range_low": "ND",
+   "range_high": 0.083,
+   "unit": "ppm",
+   "mcl": "1.3 (AL)",
+   "mclg": 1.3,
+   "violation": "N",
+   "other_values": {
+    "level label": "90th Percentile"
+   }
+  },
+  {
+   "system": "VA6099085",
+   "contaminant": "Lead",
+   "sample_date": "2022",
+   "level": 1.88,
+   "range_low": "ND",
+   "range_high": 3.76,
+   "unit": "ppb",
+   "mcl": "15 (AL)",
+   "mclg": 0.0,
+   "violation": "N",
+   "other_values": {
+    "level label": "90th Percentile"
+   }
+  },
+  {
+   "system": "VA6099085",
+   "contaminant": "Sodium",
+   "sample_date": "2023",
+   "level": 81.6,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": null,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "VA6099085",
+   "contaminant": "Free Chlorine",
+   "sample_date": "Monthly",
+   "level": 1.25,
+   "range_low": 0.45,
+   "range_high": 1.48,
+   "unit": "ppm",
+   "mcl": "4 (MRDL)",
+   "mclg": "4 (MRDLG)",
+   "violation": "N",
+   "other_values": {
+    "level label": "7 Qtrs RAA"
+   }
+  }
+ ]
+}

@@ -1,0 +1,195 @@
+{
+ "records": [
+  {
+   "system": null,
+   "contaminant": "Lead",
+   "sample_date": "08/15/24",
+   "level": 2,
+   "range_low": "<1.0",
+   "range_high": 4.0,
+   "unit": "ppb",
+   "mcl": "90% of homes less than 15 ppb",
+   "mclg": 0,
+   "violation": "N",
+   "other_values": {
+    "Number of Homes with High Levels": "1 out of 67",
+    "Range note": "One result of 133,000 ppb"
+   }
+  },
+  {
+   "system": null,
+   "contaminant": "Copper",
+   "sample_date": "08/15/24",
+   "level": 0.07,
+   "range_low": "<0.02",
+   "range_high": 0.12,
+   "unit": "ppm",
+   "mcl": "90% of homes less than 1.3 ppm",
+   "mclg": 0,
+   "violation": "N",
+   "other_values": {
+    "Number of Homes with High Levels": "1 out of 67",
+    "Range note": "One result of 1.48 ppm"
+   }
+  },
+  {
+   "system": null,
+   "contaminant": "Nitrate",
+   "sample_date": null,
+   "level": 0.86,
+   "range_low": 0.72,
+   "range_high": 0.86,
+   "unit": "ppm",
+   "mcl": 10,
+   "mclg": 10,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Total Trihalomethanes, TTHMs",
+   "sample_date": null,
+   "level": 36.7,
+   "range_low": 10.0,
+   "range_high": 58.3,
+   "unit": "ppb",
+   "mcl": 80,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Total Haloacetic Acids, HAA",
+   "sample_date": null,
+   "level": 24.1,
+   "range_low": 1.0,
+   "range_high": 39.0,
+   "unit": "ppb",
+   "mcl": 60,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Chloramine",
+   "sample_date": null,
+   "level": 3.33,
+   "range_low": 2.8,
+   "range_high": 3.7,
+   "unit": "ppm",
+   "mcl": 4.0,
+   "mclg": 4.0,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Turbidity",
+   "sample_date": null,
+   "level": 100,
+   "range_low": null,
+   "range_high": null,
+   "unit": "%",
+   "mcl": "Treatment Technique",
+   "mclg": null,
+   "violation": "N",
+   "other_values": {
+    "Highest Test Result": "0.11 NTU"
+   }
+  },
+  {
+   "system": null,
+   "contaminant": "Fluoride",
+   "sample_date": null,
+   "level": 0.7,
+   "range_low": 0.66,
+   "range_high": 0.71,
+   "unit": "ppm",
+   "mcl": 4.0,
+   "mclg": 4.0,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Total Organic Carbon",
+   "sample_date": null,
+   "level": 59,
+   "range_low": 54,
+   "range_high": 63,
+   "unit": null,
+   "mcl": "Variable",
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": null,
+   "contaminant": "Sodium",
+   "sample_date": null,
+   "level": 18.7,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": null,
+   "mclg": null,
+   "violation": null,
+   "other_values": {
+    "Comparison/Guidance Value": "20 ppm"
+   }
+  },
+  {
+   "system": null,
+   "contaminant": "Sulfate",
+   "sample_date": null,
+   "level": 27.3,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": null,
+   "mclg": null,
+   "violation": null,
+   "other_values": {
+    "Comparison/Guidance Value": "500 ppm"
+   }
+  },
+  {
+   "system": null,
+   "contaminant": "Perfluorobutanoic acid (PFBA)",
+   "sample_date": null,
+   "level": 10.12,
+   "range_low": 7.43,
+   "range_high": 12.0,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null,
+   "other_values": {
+    "Comparison/Guidance Value": "7000 ppt"
+   }
+  },
+  {
+   "system": null,
+   "contaminant": "Perfluorohexanoic acid (PFHxA)",
+   "sample_date": "2021",
+   "level": 1,
+   "range_low": 0.0,
+   "range_high": 1.0,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null,
+   "other_values": {
+    "Comparison/Guidance Value": "200 ppt"
+   }
+  },
+  {
+   "system": null,
+   "contaminant": "Perfluoropentanoic acid (PFPeA)",
+   "sample_date": "2021",
+   "level": 1,
+   "range_low": 0.0,
+   "range_high": 1.0,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  }
+ ]
+}

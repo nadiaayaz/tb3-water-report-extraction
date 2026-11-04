@@ -1,0 +1,287 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-10-26T22:55:16.762947+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.1.1"
+        },
+        "summary": {
+            "tests": 22,
+            "passed": 22,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1793055291866,
+            "stop": 1793055316761
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_extractor_exists",
+                "status": "passed",
+                "duration": 1,
+                "start": 1793055291892,
+                "stop": 1793055291893,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_set_is_complete",
+                "status": "passed",
+                "duration": 4,
+                "start": 1793055291893,
+                "stop": 1793055291897,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 1145,
+                "start": 1793055291897,
+                "stop": 1793055293042,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 543,
+                "start": 1793055293043,
+                "stop": 1793055293586,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 1323,
+                "start": 1793055293587,
+                "stop": 1793055294910,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 880,
+                "start": 1793055294913,
+                "stop": 1793055295793,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 911,
+                "start": 1793055295794,
+                "stop": 1793055296705,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 1228,
+                "start": 1793055296705,
+                "stop": 1793055297933,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 1694,
+                "start": 1793055297937,
+                "stop": 1793055299631,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 1597,
+                "start": 1793055299631,
+                "stop": 1793055301228,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 1080,
+                "start": 1793055301229,
+                "stop": 1793055302309,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 672,
+                "start": 1793055302310,
+                "stop": 1793055302982,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 1195,
+                "start": 1793055302983,
+                "stop": 1793055304178,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 2045,
+                "start": 1793055304178,
+                "stop": 1793055306223,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 1894,
+                "start": 1793055306226,
+                "stop": 1793055308120,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 768,
+                "start": 1793055308121,
+                "stop": 1793055308889,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 2896,
+                "start": 1793055308889,
+                "stop": 1793055311785,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 664,
+                "start": 1793055311788,
+                "stop": 1793055312452,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 2226,
+                "start": 1793055312453,
+                "stop": 1793055314679,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 648,
+                "start": 1793055314680,
+                "stop": 1793055315328,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 769,
+                "start": 1793055315329,
+                "stop": 1793055316098,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_held_out_report",
+                "status": "passed",
+                "duration": 662,
+                "start": 1793055316099,
+                "stop": 1793055316761,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::name::['ak-unalaska', 'ar-beaverwd', 'az-scottsdale', 'ca-mammoth', 'co-boulder', 'de-dover', 'fl-capecoral', 'ga-athensclarke', 'hi-kauai-lihue', 'in-bloomington', 'ks-kucampus', 'mi-annarbor', 'mn-minneapolis', 'mt-whitefish', 'or-eweb', 'sc-florence', 'tn-kub', 'va-kinggeorge-canterbury', 'vt-richmond', 'wa-whitworth']"
+                ]
+            }
+        ]
+    }
+}

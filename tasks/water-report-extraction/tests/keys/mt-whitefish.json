@@ -1,0 +1,142 @@
+{
+ "records": [
+  {
+   "system": "0000357",
+   "contaminant": "Copper",
+   "sample_date": "2022",
+   "level": 0.62,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppm",
+   "mcl": 1.3,
+   "mclg": 1.3,
+   "violation": "N",
+   "other_values": {
+    "# Sites Over AL": 0
+   }
+  },
+  {
+   "system": "0000357",
+   "contaminant": "Lead",
+   "sample_date": "2022",
+   "level": 2,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppb",
+   "mcl": 15,
+   "mclg": 0,
+   "violation": "N",
+   "other_values": {
+    "# Sites Over AL": 1
+   }
+  },
+  {
+   "system": "0000357",
+   "contaminant": "Chlorine",
+   "sample_date": "2024",
+   "level": 0.7,
+   "range_low": 0.6,
+   "range_high": 0.89,
+   "unit": "ppm",
+   "mcl": "MRDL = 4",
+   "mclg": "MRDLG = 4",
+   "violation": "N"
+  },
+  {
+   "system": "0000357",
+   "contaminant": "Haloacetic Acids (HAA5)",
+   "sample_date": "2024",
+   "level": 44,
+   "range_low": 16,
+   "range_high": 57,
+   "unit": "ppb",
+   "mcl": 60,
+   "mclg": "No goal for the total",
+   "violation": "N"
+  },
+  {
+   "system": "0000357",
+   "contaminant": "Total Trihalomethanes (TTHM)",
+   "sample_date": "2024",
+   "level": 36,
+   "range_low": 15,
+   "range_high": 41,
+   "unit": "ppb",
+   "mcl": 80,
+   "mclg": "No goal for the total",
+   "violation": "N"
+  },
+  {
+   "system": "0000357",
+   "contaminant": "Barium",
+   "sample_date": "2024",
+   "level": 0.12,
+   "range_low": 0.12,
+   "range_high": 0.12,
+   "unit": "ppm",
+   "mcl": 2,
+   "mclg": 2,
+   "violation": "N"
+  },
+  {
+   "system": "0000357",
+   "contaminant": "Fluoride",
+   "sample_date": "2024",
+   "level": 0.02,
+   "range_low": 0.02,
+   "range_high": 0.02,
+   "unit": "ppm",
+   "mcl": 4,
+   "mclg": 4,
+   "violation": "N"
+  },
+  {
+   "system": "0000357",
+   "contaminant": "Nitrate [measured as Nitrogen]",
+   "sample_date": "2024",
+   "level": 0.05,
+   "range_low": 0.05,
+   "range_high": 0.05,
+   "unit": "ppm",
+   "mcl": 10,
+   "mclg": 10,
+   "violation": "N"
+  },
+  {
+   "system": "0000357",
+   "contaminant": "Highest single measurement",
+   "sample_date": "6/28/2024",
+   "level": 0.104,
+   "range_low": null,
+   "range_high": null,
+   "unit": "NTU",
+   "mcl": 0.3,
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "0000357",
+   "contaminant": "Lowest monthly % meeting limit",
+   "sample_date": "2024",
+   "level": 100,
+   "range_low": null,
+   "range_high": null,
+   "unit": "%",
+   "mcl": "At least 95%",
+   "mclg": null,
+   "violation": "N"
+  },
+  {
+   "system": "0000357",
+   "contaminant": "SULFATE",
+   "sample_date": "2024",
+   "level": 1.1,
+   "range_low": 1.1,
+   "range_high": 1.1,
+   "unit": "ppm",
+   "mcl": 250,
+   "mclg": null,
+   "violation": null
+  }
+ ]
+}

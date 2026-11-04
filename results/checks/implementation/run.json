@@ -1,0 +1,18 @@
+{
+ "agent": "claude-code",
+ "model": "anthropic/claude-sonnet-5",
+ "rubric_source": "harbor-framework/terminal-bench/docs/prompts/task-implementation.toml",
+ "rubric_sha256": "19b879cd424cc22cc2f56d8f80ed98c9c386a8df0885377f7cb9d4ebab21df5a",
+ "exit_code": 1,
+ "seconds": 526,
+ "started_utc": "2026-11-03T20:35:01.626854Z",
+ "finished_utc": "2026-11-03T20:43:46.592127Z",
+ "outcomes": {
+  "pass": 34,
+  "fail": 0,
+  "not_applicable": 1
+ },
+ "report_source": "recovered from the reviewer's session log (written to /app/task/check-result.json)",
+ "validator_exit_code": 0,
+ "harbor_wrapper_error": "The reviewer wrote its report outside /app/check-result.json, so the wrapper found no result file; the report was recovered verbatim from the reviewer's session log. Harbor masks the --ae values in its logs and CLAUDE_FORCE_OAUTH=1 made it replace every digit 1 with [REDACTED]; the 1s were restored before parsing (the token itself never appears in the report)."
+}

@@ -1,0 +1,301 @@
+{
+ "records": [
+  {
+   "system": "VT0005084",
+   "contaminant": "Chlorine",
+   "sample_date": null,
+   "level": 1.03,
+   "range_low": 0.1,
+   "range_high": 1.12,
+   "unit": "mg/l",
+   "mcl": 4,
+   "mclg": 4,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "Fluoride",
+   "sample_date": "11/18/202m4",
+   "level": 0.9,
+   "range_low": 0.4,
+   "range_high": 0.9,
+   "unit": "ppm",
+   "mcl": 4,
+   "mclg": 4,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "Nitrate",
+   "sample_date": "01/11/2024",
+   "level": 1.6,
+   "range_low": 1.6,
+   "range_high": 1.6,
+   "unit": "ppm",
+   "mcl": 10,
+   "mclg": 10,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFHpA",
+   "sample_date": "10/06/2022",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFNA",
+   "sample_date": "10/06/2022",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFHxS",
+   "sample_date": "10/06/2022",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFOA",
+   "sample_date": "10/06/2022",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFOS",
+   "sample_date": "10/06/2022",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "Sum of 5 regulated PFAS compounds",
+   "sample_date": "10/06/2022",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFHpA",
+   "sample_date": "10/19/2021",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFNA",
+   "sample_date": "10/19/2021",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFHxS",
+   "sample_date": "10/19/2021",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFOA",
+   "sample_date": "10/19/2021",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFOS",
+   "sample_date": "10/19/2021",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "Sum of 5 regulated PFAS compounds",
+   "sample_date": "10/19/2021",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFHpA",
+   "sample_date": "10/13/2020",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFNA",
+   "sample_date": "10/13/2020",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFHxS",
+   "sample_date": "10/13/2020",
+   "level": 2.16,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFOA",
+   "sample_date": "10/13/2020",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "PFOS",
+   "sample_date": "10/13/2020",
+   "level": "ND",
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "Sum of 5 regulated PFAS compounds",
+   "sample_date": "10/13/2020",
+   "level": 2.16,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ppt",
+   "mcl": null,
+   "mclg": null,
+   "violation": null
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "Total Trihalomethanes (TTHM)",
+   "sample_date": "2024",
+   "level": 36,
+   "range_low": 36,
+   "range_high": 36,
+   "unit": "ppb",
+   "mcl": 80,
+   "mclg": 0,
+   "violation": null,
+   "other_values": {
+    "Sample Location": "CAMEL'S HUMP MIDDLE SCHOOL"
+   }
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "Lead",
+   "sample_date": "07/06/2024 - 07/10/2024",
+   "level": 3.3,
+   "range_low": 0,
+   "range_high": 3.8,
+   "unit": "ppb",
+   "mcl": 15,
+   "mclg": null,
+   "violation": null,
+   "other_values": {
+    "Sites Over AL": 0
+   }
+  },
+  {
+   "system": "VT0005084",
+   "contaminant": "Copper",
+   "sample_date": "07/06/2024 - 07/10/2024",
+   "level": 0.87,
+   "range_low": 0.15,
+   "range_high": 1.2,
+   "unit": "ppm",
+   "mcl": 1.3,
+   "mclg": null,
+   "violation": null,
+   "other_values": {
+    "Sites Over AL": 0
+   }
+  }
+ ]
+}

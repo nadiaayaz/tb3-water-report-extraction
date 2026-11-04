@@ -1,0 +1,2 @@
+Harbor report validator exit code: 0
+All required criteria present with valid outcomes and non-empty explanations.

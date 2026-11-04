@@ -1,0 +1,150 @@
+{
+ "records": [
+  {
+   "system": "96601Y",
+   "contaminant": "Nitrate - IOC",
+   "sample_date": null,
+   "level": 2.8,
+   "range_low": null,
+   "range_high": null,
+   "unit": "mg/L",
+   "mcl": 10,
+   "mclg": 10,
+   "violation": "N"
+  },
+  {
+   "system": "96601Y",
+   "contaminant": "Arsenic -IOC",
+   "sample_date": null,
+   "level": 3.3,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ug/L",
+   "mcl": 10,
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "96601Y",
+   "contaminant": "Radium 228",
+   "sample_date": null,
+   "level": 0.194,
+   "range_low": null,
+   "range_high": null,
+   "unit": "pCi/L",
+   "mcl": 5,
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "96601Y",
+   "contaminant": "Gross Alpha",
+   "sample_date": null,
+   "level": 1.23,
+   "range_low": null,
+   "range_high": null,
+   "unit": "pCi/L",
+   "mcl": 15,
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "96601Y",
+   "contaminant": "VOC",
+   "sample_date": null,
+   "level": 0.63,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ug/L",
+   "mcl": 5,
+   "mclg": 0,
+   "violation": "N"
+  },
+  {
+   "system": "96601Y",
+   "contaminant": "Lead",
+   "sample_date": "2024",
+   "level": 1.5,
+   "range_low": null,
+   "range_high": null,
+   "unit": "ug/L",
+   "mcl": "AL=15",
+   "mclg": 0,
+   "violation": null,
+   "other_values": {
+    "District High": 1.01,
+    "# of Sites Exceeding AL": 0,
+    "contaminant cell": "Lead (Tested 30 at risk homes in 2024) Next Testing 2027"
+   }
+  },
+  {
+   "system": "96601Y",
+   "contaminant": "Copper",
+   "sample_date": "2024",
+   "level": 0,
+   "range_low": null,
+   "range_high": null,
+   "unit": "mg/L",
+   "mcl": "AL=1.3",
+   "mclg": 0,
+   "violation": null,
+   "other_values": {
+    "District High": 0.0388,
+    "# of Sites Exceeding AL": 0,
+    "contaminant cell": "Copper (Tested 30 at risk homes in 2024) Next Testing 2027"
+   }
+  },
+  {
+   "system": "96601Y",
+   "contaminant": "PFOA",
+   "sample_date": null,
+   "level": 3.34,
+   "range_low": null,
+   "range_high": null,
+   "unit": "pp/trillion",
+   "mcl": 10,
+   "mclg": null,
+   "violation": null,
+   "location": "Well 8A1 (1014 E Parkhill)"
+  },
+  {
+   "system": "96601Y",
+   "contaminant": "PFOA",
+   "sample_date": null,
+   "level": 5.68,
+   "range_low": null,
+   "range_high": null,
+   "unit": "pp/trillion",
+   "mcl": 10,
+   "mclg": null,
+   "violation": null,
+   "location": "Well 8A2 (1014 E Parkhill)"
+  },
+  {
+   "system": "96601Y",
+   "contaminant": "PFOS",
+   "sample_date": null,
+   "level": 3.26,
+   "range_low": null,
+   "range_high": null,
+   "unit": "pp/trillion",
+   "mcl": 15,
+   "mclg": null,
+   "violation": null,
+   "location": "Well 8A1 (1014 E Parkhill)"
+  },
+  {
+   "system": "96601Y",
+   "contaminant": "PFOS",
+   "sample_date": null,
+   "level": 5.05,
+   "range_low": null,
+   "range_high": null,
+   "unit": "pp/trillion",
+   "mcl": 15,
+   "mclg": null,
+   "violation": null,
+   "location": "Well 8A2 (1014 E Parkhill)"
+  }
+ ]
+}
